@@ -12,46 +12,51 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600;700&display=swap" rel="stylesheet" />
 <style>
   :root{
-    /* Refined brokerage palette: deep pine, warm stone, muted clay */
-    --bg:#edecea;
+    /* Sky-blue palette: the blue sky and clouds already in the photos */
+    --bg:#e8f2f8;
     --surface:#ffffff;
-    --surface-2:#e2e5de;
-    --ink:#1b2420;
-    --muted:#556258;
-    --line:#d2d7cd;
-    --navy:#1d332a;
-    --navy-2:#2b4a3c;
-    --brass:#96683f;
-    --brass-soft:#eadfd2;
-    --on-navy:#edf2ed;
-    --on-navy-muted:#bcc9be;
-    --focus:#2f6b4f;
-    --success-bg:#e3eee4;
-    --success-ink:#245434;
-    --shadow:0 10px 30px rgba(29,51,42,.12);
+    --surface-2:#d8ebf6;
+    --ink:#14324a;
+    --muted:#4d6d84;
+    --line:#c2d9e8;
+    --navy:#0e4a73;
+    --navy-2:#1668a0;
+    --brass:#d99e1f;
+    --brass-ink:#8a5f06;
+    --gold:#f2b234;
+    --brass-soft:#fdf3d7;
+    --on-navy:#eaf4fa;
+    --on-navy-muted:#b8d2e2;
+    --focus:#1668a0;
+    --success-bg:#dceefb;
+    --success-ink:#0e4a73;
+    --shadow:0 10px 30px rgba(14,74,115,.12);
     --radius:14px;
   }
   @media (prefers-color-scheme: dark){
     :root{
-      --bg:#0e1511;
-      --surface:#16211b;
-      --surface-2:#1e2d24;
-      --ink:#e7ede7;
-      --muted:#a6b4a9;
-      --line:#2e4237;
-      --navy:#1d332a;
-      --navy-2:#38604b;
-      --brass:#c79a73;
-      --brass-soft:#2e241b;
-      --on-navy:#edf2ed;
-      --on-navy-muted:#bcc9be;
-      --success-bg:#173325;
-      --success-ink:#9ed7ae;
+      --bg:#081c2b;
+      --surface:#0e2738;
+      --surface-2:#143349;
+      --ink:#e9f3f9;
+      --muted:#a9c3d6;
+      --line:#234a64;
+      --navy:#0c3550;
+      --navy-2:#2b7cb3;
+      --brass:#e8ac2e;
+      --brass-ink:#f2c14e;
+      --gold:#f2b234;
+      --brass-soft:#2b2413;
+      --on-navy:#eaf4fa;
+      --on-navy-muted:#b8d2e2;
+      --success-bg:#12344a;
+      --success-ink:#a8d8f5;
       --shadow:0 10px 30px rgba(0,0,0,.4);
     }
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
+  [id]{scroll-margin-top:80px}
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto}
     *{transition:none !important; animation:none !important}
@@ -68,7 +73,7 @@
   h1,h2,h3{font-family:"IBM Plex Serif", Georgia, serif; line-height:1.15; margin:0; font-weight:600}
   p{margin:0}
   a{color:var(--navy-2)}
-  @media (prefers-color-scheme: dark){ a{color:#a9c6b4} }
+  @media (prefers-color-scheme: dark){ a{color:#8fc3e8} }
   .wrap{max-width:1160px; margin:0 auto; padding:0 20px}
 
   /* ---------- Nav ---------- */
@@ -86,7 +91,7 @@
   .nav-links a{color:var(--on-navy); text-decoration:none; font-size:.95rem; font-weight:500}
   .nav-links a:hover{text-decoration:underline; text-underline-offset:4px}
   .nav-cta{
-    background:var(--brass); color:#14100a !important; font-weight:600 !important;
+    background:var(--gold); color:#1c2b38 !important; font-weight:600 !important;
     padding:9px 16px; border-radius:8px;
   }
   .nav-cta:hover{text-decoration:none !important; filter:brightness(1.07)}
@@ -102,10 +107,10 @@
   .hero-grid{display:grid; grid-template-columns:1.05fr .95fr; gap:40px; align-items:center}
   .hero-eyebrow{
     display:inline-block; font-size:.8rem; font-weight:600; letter-spacing:.13em; text-transform:uppercase;
-    color:#dfbb97; border:1px solid rgba(223,187,151,.5); padding:5px 12px; border-radius:999px; margin-bottom:18px;
+    color:#ffd98a; border:1px solid rgba(255,217,138,.5); padding:5px 12px; border-radius:999px; margin-bottom:18px;
   }
   .hero h1{font-size:clamp(2rem, 4.6vw, 3.15rem); color:#fff; margin-bottom:18px}
-  .hero h1 em{font-style:normal; color:#dfbb97}
+  .hero h1 em{font-style:normal; color:#ffd98a}
   .hero-lede{font-size:1.13rem; color:var(--on-navy-muted); max-width:34rem; margin-bottom:26px}
   .hero-actions{display:flex; gap:12px; flex-wrap:wrap; margin-bottom:28px}
   .btn{
@@ -114,7 +119,7 @@
     padding:13px 22px; border-radius:9px; border:1px solid transparent; cursor:pointer;
     transition:filter .15s ease, background .15s ease;
   }
-  .btn-brass{background:var(--brass); color:#171106}
+  .btn-brass{background:var(--gold); color:#1c2b38}
   .btn-brass:hover{filter:brightness(1.08)}
   .btn-ghost{background:transparent; color:#fff; border-color:rgba(255,255,255,.45)}
   .btn-ghost:hover{background:rgba(255,255,255,.08)}
@@ -126,7 +131,7 @@
   .hero-points{display:flex; gap:10px 26px; flex-wrap:wrap; font-size:.95rem; color:var(--on-navy)}
   .hero-points li{list-style:none; display:flex; align-items:center; gap:8px}
   .hero-points ul{margin:0; padding:0; display:contents}
-  .check{color:#dfbb97; font-weight:700}
+  .check{color:#ffd98a; font-weight:700}
   .hero-photo{position:relative}
   .hero-photo img{
     width:100%; height:420px; object-fit:cover; display:block;
@@ -151,7 +156,7 @@
   .section-head{max-width:44rem; margin-bottom:34px}
   .section-head h2{font-size:clamp(1.65rem, 3vw, 2.2rem); margin-bottom:10px}
   .section-head p{color:var(--muted); font-size:1.05rem}
-  .kicker{font-size:.8rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; color:var(--brass); margin-bottom:10px}
+  .kicker{font-size:.8rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; color:var(--brass-ink); margin-bottom:10px}
 
   /* Lending cards */
   .lending-grid{display:grid; grid-template-columns:repeat(2, 1fr); gap:22px}
@@ -163,7 +168,7 @@
   .lend-card img{width:100%; height:190px; object-fit:cover; display:block}
   .lend-body{padding:24px; display:flex; flex-direction:column; gap:12px; flex:1}
   .lend-body h3{font-size:1.35rem}
-  .lend-tag{font-size:.78rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--brass)}
+  .lend-tag{font-size:.78rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--brass-ink)}
   .lend-body p{color:var(--muted); font-size:.99rem}
   .lend-list{margin:2px 0 6px; padding:0; list-style:none; display:grid; gap:7px; font-size:.97rem}
   .lend-list li{display:flex; gap:9px}
@@ -183,7 +188,7 @@
   }
   .rezitrade-box .rt-badge{
     display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:.09em; text-transform:uppercase;
-    background:var(--brass); color:#fff8f0; padding:4px 10px; border-radius:999px; margin-bottom:8px;
+    background:var(--gold); color:#1c2b38; padding:4px 10px; border-radius:999px; margin-bottom:8px;
   }
   .rezitrade-box strong.rt-title{display:block; font-size:1.02rem; color:#fff; margin-bottom:5px}
   .rezitrade-box p{color:var(--on-navy-muted); font-size:.9rem; line-height:1.55}
@@ -196,7 +201,7 @@
   @media (max-width:860px){ .rezitrade-banner{grid-template-columns:1fr; padding:26px} }
   .rezitrade-banner .rt-badge{
     display:inline-block; font-size:.74rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
-    background:var(--brass); color:#fff8f0; padding:5px 12px; border-radius:999px; margin-bottom:14px;
+    background:var(--gold); color:#1c2b38; padding:5px 12px; border-radius:999px; margin-bottom:14px;
   }
   .rezitrade-banner h3{font-size:1.6rem; color:#fff; margin-bottom:12px}
   .rezitrade-banner .rt-lede{color:var(--on-navy-muted); font-size:1rem; margin-bottom:18px}
@@ -237,7 +242,7 @@
   @media (max-width:880px){ .steps{grid-template-columns:1fr} }
   .step{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:26px}
   .step-num{
-    font-family:"IBM Plex Serif", Georgia, serif; font-size:1.9rem; font-weight:700; color:var(--brass);
+    font-family:"IBM Plex Serif", Georgia, serif; font-size:1.9rem; font-weight:700; color:var(--brass-ink);
     display:block; margin-bottom:8px;
   }
   .step h3{font-size:1.18rem; margin-bottom:8px}
@@ -262,7 +267,7 @@
   details.faq{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:4px 20px}
   details.faq summary{cursor:pointer; font-weight:600; padding:14px 0; list-style:none; display:flex; justify-content:space-between; gap:12px}
   details.faq summary::-webkit-details-marker{display:none}
-  details.faq summary::after{content:"+"; color:var(--brass); font-weight:700; font-size:1.2rem; line-height:1.3}
+  details.faq summary::after{content:"+"; color:var(--brass-ink); font-weight:700; font-size:1.2rem; line-height:1.3}
   details.faq[open ] summary::after{content:"–"}
   details.faq p{color:var(--muted); padding:0 0 16px; font-size:.98rem}
 
@@ -278,7 +283,7 @@
   }
   .contact-alt strong{display:block; margin-bottom:4px; color:#fff}
   .contact-alt p{color:var(--on-navy-muted); font-size:.95rem; margin-bottom:10px}
-  .contact-alt a{color:#dfbb97; font-weight:600}
+  .contact-alt a{color:#ffd98a; font-weight:600}
   form.lead{
     background:var(--surface); color:var(--ink); border-radius:var(--radius);
     padding:26px; box-shadow:0 18px 44px rgba(0,0,0,.3);
@@ -312,6 +317,99 @@
   .inquiry-result .row{display:flex; gap:10px; flex-wrap:wrap}
   .inquiry-result .btn{padding:10px 16px; font-size:.93rem}
 
+  /* ---------- Rates snapshot ---------- */
+  .rates{padding:44px 0 8px}
+  .rates-panel{
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+    box-shadow:var(--shadow); padding:28px;
+  }
+  .rates-head{display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; align-items:flex-end; margin-bottom:20px}
+  .rates-head h2{font-size:clamp(1.5rem, 2.6vw, 1.95rem); margin-bottom:6px}
+  .rates-head p{color:var(--muted); max-width:44rem; font-size:.99rem}
+  .rates-asof{
+    flex:0 0 auto; font-size:.85rem; font-weight:600; color:var(--ink);
+    background:var(--surface-2); border:1px solid var(--line); border-radius:999px; padding:7px 14px; white-space:nowrap;
+  }
+  .rates-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+  @media (max-width:860px){ .rates-grid{grid-template-columns:1fr} }
+  .rate-card{
+    border:1px solid var(--line); border-radius:12px; padding:20px;
+    background:var(--bg);
+  }
+  .rate-card .rate-label{font-size:.8rem; font-weight:700; letter-spacing:.09em; text-transform:uppercase; color:var(--brass-ink); margin-bottom:8px}
+  .rate-card .rate-value{font-family:"IBM Plex Serif", Georgia, serif; font-size:2.35rem; font-weight:700; line-height:1; color:var(--navy); margin-bottom:8px}
+  @media (prefers-color-scheme: dark){ .rate-value{color:#8fc3e8} }
+  .rate-card p{color:var(--muted); font-size:.92rem; line-height:1.55}
+  .rate-change{font-weight:600; color:var(--ink)}
+  .rates-curve{margin-top:16px; font-size:.92rem; color:var(--muted)}
+  .rates-curve strong{color:var(--ink)}
+  .rates-foot{
+    margin-top:20px; padding-top:18px; border-top:1px solid var(--line);
+    display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; align-items:flex-start;
+  }
+  .rates-foot p{font-size:.87rem; color:var(--muted); line-height:1.6; max-width:46rem}
+  .rates-foot p a{font-weight:600}
+  .rates-actions{display:flex; gap:10px; flex-wrap:wrap; flex:0 0 auto}
+  .rates-actions .btn{padding:11px 18px; font-size:.95rem}
+
+  /* ---------- Mortgage calculator ---------- */
+  .calculator{
+    margin-top:22px; background:var(--surface); border:1px solid var(--line);
+    border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden;
+  }
+  .calc-head{padding:26px 28px 0}
+  .calc-head h3{font-size:1.55rem; margin-bottom:8px}
+  .calc-head p{color:var(--muted); font-size:.99rem; max-width:46rem}
+  .calc-grid{display:grid; grid-template-columns:1fr 1fr; gap:28px; padding:24px 28px 28px}
+  @media (max-width:860px){ .calc-grid{grid-template-columns:1fr} }
+  .calc-fields{display:grid; grid-template-columns:1fr 1fr; gap:16px; align-content:start}
+  @media (max-width:560px){ .calc-fields{grid-template-columns:1fr} }
+  .calc-fields .field.full{grid-column:1 / -1}
+  .field-hint{font-size:.83rem; color:var(--muted); font-weight:400}
+  .term-row{display:flex; gap:8px; flex-wrap:wrap}
+  .term-pill{position:relative}
+  .term-pill input{position:absolute; opacity:0; width:1px; height:1px}
+  .term-pill span{
+    display:inline-block; padding:10px 16px; border:1px solid var(--line); border-radius:999px;
+    font-weight:600; font-size:.95rem; cursor:pointer; background:var(--bg); color:var(--ink);
+  }
+  .term-pill input:checked + span{background:var(--navy); color:#fff; border-color:var(--navy)}
+  .term-pill input:focus-visible + span{outline:2px solid var(--focus); outline-offset:2px}
+  .calc-note{font-size:.87rem; color:var(--muted); line-height:1.6}
+  .calc-note button{
+    background:none; border:none; padding:0; font:inherit; color:var(--navy-2);
+    font-weight:600; text-decoration:underline; text-underline-offset:3px; cursor:pointer;
+  }
+  @media (prefers-color-scheme: dark){ .calc-note button{color:#8fc3e8} }
+  .calc-result{
+    background:var(--navy); color:var(--on-navy); border-radius:12px; padding:24px;
+    display:flex; flex-direction:column; gap:16px; align-self:start;
+  }
+  .calc-result .result-label{font-size:.8rem; font-weight:700; letter-spacing:.11em; text-transform:uppercase; color:var(--on-navy-muted)}
+  .calc-total{font-family:"IBM Plex Serif", Georgia, serif; font-size:2.5rem; font-weight:700; line-height:1; color:#fff}
+  .calc-total small{display:block; font-family:"IBM Plex Sans", system-ui, sans-serif; font-size:.85rem; font-weight:400; color:var(--on-navy-muted); margin-top:6px; letter-spacing:0}
+  .calc-bar{display:flex; height:12px; border-radius:999px; overflow:hidden; background:rgba(255,255,255,.18)}
+  .calc-bar i{display:block; height:100%}
+  .bar-pi{background:#ffd98a}
+  .bar-tax{background:#7fc0e8}
+  .bar-ins{background:#ffffff}
+  .bar-hoa{background:#f2b234}
+  .calc-breakdown{margin:0; display:grid; gap:0}
+  .calc-breakdown div{display:flex; justify-content:space-between; gap:14px; padding:9px 0; border-bottom:1px solid rgba(255,255,255,.16); font-size:.95rem}
+  .calc-breakdown div:last-child{border-bottom:none}
+  .calc-breakdown dt{display:flex; align-items:center; gap:8px}
+  .calc-breakdown dt::before{content:""; width:10px; height:10px; border-radius:50%; flex:0 0 auto; background:var(--dot,#fff)}
+  .calc-breakdown dd{margin:0; font-weight:600; color:#fff}
+  .calc-totals{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+  .calc-totals div{background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.14); border-radius:10px; padding:11px 13px}
+  .calc-totals span{display:block; font-size:.8rem; color:var(--on-navy-muted); margin-bottom:3px}
+  .calc-totals strong{font-size:1.02rem; color:#fff}
+  .calc-result .btn{justify-content:center}
+  .calc-disclaimer{font-size:.82rem; line-height:1.6; color:var(--on-navy-muted)}
+  .calc-error{display:none; background:#fbe9e7; color:#8c2b1d; border-radius:8px; padding:11px 13px; font-size:.92rem}
+  @media (prefers-color-scheme: dark){ .calc-error{background:#3d1d18; color:#f0b3a7} }
+  .calc-error.show{display:block}
+
   /* Footer */
   footer{background:var(--navy); color:var(--on-navy-muted); border-top:1px solid rgba(255,255,255,.12); padding:34px 0 40px; font-size:.92rem}
   .footer-grid{display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap; margin-bottom:20px}
@@ -339,6 +437,7 @@
       <span>Mortgage Brokerage · rigocap.com</span>
     </a>
     <nav class="nav-links" aria-label="Main navigation">
+      <a href="#rates">Rates</a>
       <a href="#lending">Lending Options</a>
       <a href="#how">How It Works</a>
       <a href="#about">About</a>
@@ -387,6 +486,79 @@
     </div>
   </div>
 
+  <!-- MARKET RATES SNAPSHOT -->
+  <section class="rates" id="rates" aria-label="Market rates snapshot">
+    <div class="wrap">
+      <div class="rates-panel">
+        <div class="rates-head">
+          <div>
+            <p class="kicker">Market Rates · Snapshot</p>
+            <h2>Rates at a glance</h2>
+            <p>
+              The benchmarks that move mortgage pricing — the 10-year Treasury, published each
+              business day, and the national average mortgage rates, published weekly. These are
+              averages and benchmarks, not a quote for any one borrower.
+            </p>
+          </div>
+          <span class="rates-asof">Checked November 4, 2026</span>
+        </div>
+
+        <div class="rates-grid">
+          <div class="rate-card">
+            <p class="rate-label">10-Year Treasury Yield</p>
+            <p class="rate-value">4.95%</p>
+            <p>
+              Daily par yield, <strong>November 3, 2026</strong>.<br />
+              <span class="rate-change">Up 0.04 points</span> from 4.91% on November 2.
+            </p>
+          </div>
+          <div class="rate-card">
+            <p class="rate-label">30-Year Fixed · National Average</p>
+            <p class="rate-value">7.24%</p>
+            <p>
+              Freddie Mac weekly average, week ending <strong>October 29, 2026</strong>.<br />
+              <span class="rate-change">Down 0.08 points</span> from 7.32% the prior week.
+              A year ago: 6.17%.
+            </p>
+          </div>
+          <div class="rate-card">
+            <p class="rate-label">15-Year Fixed · National Average</p>
+            <p class="rate-value">6.60%</p>
+            <p>
+              Freddie Mac weekly average, week ending <strong>October 29, 2026</strong>.<br />
+              <span class="rate-change">Down 0.08 points</span> from 6.68% the prior week.
+              A year ago: 5.41%.
+            </p>
+          </div>
+        </div>
+
+        <p class="rates-curve">
+          Same Treasury curve, November 3, 2026: <strong>2-year 4.61%</strong> ·
+          <strong>5-year 4.74%</strong> · <strong>30-year 5.32%</strong>.
+          The Freddie Mac survey covers conventional, conforming purchase loans for borrowers
+          with 20% down and excellent credit.
+        </p>
+
+        <div class="rates-foot">
+          <p>
+            This panel is a dated snapshot — it does not update itself. The Treasury publishes
+            its daily yield curve each business day and Freddie Mac publishes its survey on
+            Thursdays, so the next Freddie Mac update after this snapshot is due November 5, 2026.
+            Your rate will differ by credit, down payment, property, and loan type, and can
+            change during the day. Sources:
+            <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve" target="_blank" rel="noopener">U.S. Department of the Treasury, Daily Treasury Par Yield Curve Rates</a>
+            and
+            <a href="https://in.tradingview.com/news/globenewswire:36fe9b240094b:0-mortgage-rates-decline-further-to-7-24/" target="_blank" rel="noopener">Freddie Mac Primary Mortgage Market Survey®, October 29, 2026 release</a>.
+          </p>
+          <div class="rates-actions">
+            <a class="btn btn-navy" href="#calculator">Estimate a Payment ↓</a>
+            <a class="btn btn-outline" href="#contact">Ask for Today's Quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- LENDING OPTIONS -->
   <section id="lending">
     <div class="wrap">
@@ -428,6 +600,7 @@
             </div>
             <div class="lend-actions">
               <a class="btn btn-navy" href="https://reziloans.com/steven-rigo/" target="_blank" rel="noopener">Go to Rezi Loans →</a>
+              <a class="btn btn-outline" href="#calculator">Try the Mortgage Calculator ↓</a>
             </div>
             <div class="lend-compliance">
               <span class="eho-badge">
@@ -509,6 +682,91 @@
             </div>
           </div>
         </article>
+      </div>
+
+      <!-- MORTGAGE CALCULATOR — RESIDENTIAL -->
+      <div class="calculator" id="calculator" aria-label="Mortgage calculator">
+        <div class="calc-head">
+          <p class="kicker">Residential · Mortgage Calculator</p>
+          <h3>Estimate your monthly payment</h3>
+          <p>
+            Adjust the numbers to fit your purchase. The rate starts at the latest national
+            average for a 30-year fixed loan — change it to any rate you are considering.
+          </p>
+        </div>
+        <div class="calc-grid">
+          <div>
+            <div class="calc-fields">
+              <div class="field">
+                <label for="calc-price">Home price</label>
+                <input id="calc-price" type="number" inputmode="decimal" min="0" step="1000" value="400000" />
+              </div>
+              <div class="field">
+                <label for="calc-down">Down payment <span class="field-hint" id="calc-down-pct"></span></label>
+                <input id="calc-down" type="number" inputmode="decimal" min="0" step="1000" value="80000" />
+              </div>
+              <div class="field">
+                <label for="calc-rate">Interest rate (% per year)</label>
+                <input id="calc-rate" type="number" inputmode="decimal" min="0" max="25" step="0.01" value="7.24" />
+              </div>
+              <div class="field">
+                <label>Loan term</label>
+                <div class="term-row" role="radiogroup" aria-label="Loan term in years">
+                  <label class="term-pill"><input type="radio" name="calc-term" value="30" checked /><span>30 years</span></label>
+                  <label class="term-pill"><input type="radio" name="calc-term" value="20" /><span>20 years</span></label>
+                  <label class="term-pill"><input type="radio" name="calc-term" value="15" /><span>15 years</span></label>
+                  <label class="term-pill"><input type="radio" name="calc-term" value="10" /><span>10 years</span></label>
+                </div>
+              </div>
+              <div class="field">
+                <label for="calc-tax">Property taxes <span class="opt">(per year)</span></label>
+                <input id="calc-tax" type="number" inputmode="decimal" min="0" step="100" value="4800" />
+              </div>
+              <div class="field">
+                <label for="calc-insurance">Homeowners insurance <span class="opt">(per year)</span></label>
+                <input id="calc-insurance" type="number" inputmode="decimal" min="0" step="100" value="1800" />
+              </div>
+              <div class="field full">
+                <label for="calc-hoa">HOA dues <span class="opt">(per month — enter 0 if none)</span></label>
+                <input id="calc-hoa" type="number" inputmode="decimal" min="0" step="10" value="0" />
+              </div>
+            </div>
+            <div class="calc-error" id="calc-error" role="alert" style="margin-top:16px"></div>
+            <p class="calc-note" style="margin-top:16px">
+              Taxes and insurance are estimates you enter — they vary by property, county, and
+              carrier. <button type="button" id="calc-use-average">Use the latest national average rate</button>
+              for the term selected above: 7.24% for a 30-year fixed, 6.60% for a 15-year fixed
+              (Freddie Mac, week ending October 29, 2026).
+            </p>
+          </div>
+
+          <div class="calc-result" aria-live="polite">
+            <div>
+              <p class="result-label">Estimated monthly payment</p>
+              <p class="calc-total"><span id="calc-total">$0</span><small>Principal &amp; interest, taxes, insurance &amp; HOA</small></p>
+            </div>
+            <div class="calc-bar" aria-hidden="true">
+              <i class="bar-pi" id="bar-pi"></i><i class="bar-tax" id="bar-tax"></i><i class="bar-ins" id="bar-ins"></i><i class="bar-hoa" id="bar-hoa"></i>
+            </div>
+            <dl class="calc-breakdown">
+              <div><dt style="--dot:#ffd98a">Principal &amp; interest</dt><dd id="calc-pi">$0</dd></div>
+              <div><dt style="--dot:#7fc0e8">Property taxes</dt><dd id="calc-tax-out">$0</dd></div>
+              <div><dt style="--dot:#ffffff">Homeowners insurance</dt><dd id="calc-ins-out">$0</dd></div>
+              <div><dt style="--dot:#f2b234">HOA dues</dt><dd id="calc-hoa-out">$0</dd></div>
+            </dl>
+            <div class="calc-totals">
+              <div><span>Loan amount</span><strong id="calc-loan">$0</strong></div>
+              <div><span>Total interest over the loan</span><strong id="calc-interest">$0</strong></div>
+            </div>
+            <button class="btn btn-brass" type="button" id="calc-discuss">Discuss This Estimate</button>
+            <p class="calc-disclaimer">
+              Estimate only — not a quote, pre-approval, or commitment to lend. It excludes
+              private mortgage insurance, closing costs, and any buydown or points, and assumes
+              a fixed rate for the full term with on-time payments. Your actual payment will
+              differ. See the residential disclosures below.
+            </p>
+          </div>
+        </div>
       </div>
 
       <!-- REZITRADE FEATURE — RESIDENTIAL -->
@@ -737,6 +995,17 @@
           </p>
         </details>
         <details class="faq">
+          <summary>Are the rates on this page live quotes?</summary>
+          <p>
+            No. The rates panel is a dated snapshot: the 10-year Treasury yield is the U.S.
+            Department of the Treasury's daily par yield, and the national average mortgage
+            rates are Freddie Mac's weekly survey, published on Thursdays. Neither updates
+            itself on this page, and neither is a quote — your rate depends on your credit,
+            down payment, property, and loan type, and can move during the day. Ask Steven
+            for a current quote for your scenario.
+          </p>
+        </details>
+        <details class="faq">
           <summary>Does submitting an inquiry commit me to anything?</summary>
           <p>
             No. An inquiry starts a conversation. Any loan is subject to lender approval,
@@ -867,7 +1136,7 @@
         <strong>Equal Housing Opportunity</strong> · <strong>Steven Rigo — NMLS #1977558</strong> ·
         Residential lending through Rezi Loans, powered by
         <strong>E Mortgage Capital, Inc. — NMLS #1416824</strong>.
-        Verify licensing at <a href="https://www.nmlsconsumeraccess.org" target="_blank" rel="noopener" style="color:#dfbb97">nmlsconsumeraccess.org</a>.
+        Verify licensing at <a href="https://www.nmlsconsumeraccess.org" target="_blank" rel="noopener" style="color:#ffd98a">nmlsconsumeraccess.org</a>.
       </p>
     </div>
     <div class="disclaimer">
@@ -1000,6 +1269,96 @@
     setTimeout(function(){ URL.revokeObjectURL(url); }, 800);
     copyStatus.textContent = 'Downloaded as rigo-capital-inquiry.txt.';
   });
+  // Mortgage calculator: principal & interest + taxes + insurance + HOA
+  var calcPrice = document.getElementById('calc-price');
+  var calcDown = document.getElementById('calc-down');
+  var calcRate = document.getElementById('calc-rate');
+  var calcTax = document.getElementById('calc-tax');
+  var calcInsurance = document.getElementById('calc-insurance');
+  var calcHoa = document.getElementById('calc-hoa');
+  var calcError = document.getElementById('calc-error');
+  var calcDownPct = document.getElementById('calc-down-pct');
+  var money = new Intl.NumberFormat('en-US', {style:'currency', currency:'USD', maximumFractionDigits:0});
+  var moneyCents = new Intl.NumberFormat('en-US', {style:'currency', currency:'USD', minimumFractionDigits:2, maximumFractionDigits:2});
+
+  function num(el){ var v = parseFloat(el.value); return (isNaN(v) || v < 0) ? 0 : v; }
+  function calcTerm(){
+    var checked = document.querySelector('input[name="calc-term"]:checked');
+    return checked ? parseInt(checked.value, 10) : 30;
+  }
+  function setText(id, value){ document.getElementById(id).textContent = value; }
+
+  function updateCalculator(){
+    var price = num(calcPrice);
+    var down = num(calcDown);
+    var rate = num(calcRate);
+    var term = calcTerm();
+    var n = term * 12;
+    var loan = Math.max(price - down, 0);
+    var r = rate / 100 / 12;
+    var pi = 0;
+    if (loan > 0 && n > 0) {
+      pi = (r === 0) ? (loan / n) : (loan * r / (1 - Math.pow(1 + r, -n)));
+    }
+    var taxM = num(calcTax) / 12;
+    var insM = num(calcInsurance) / 12;
+    var hoaM = num(calcHoa);
+    var total = pi + taxM + insM + hoaM;
+    var totalInterest = Math.max(pi * n - loan, 0);
+
+    calcDownPct.textContent = (price > 0) ? '(' + (down / price * 100).toFixed(1) + '% of price)' : '';
+    if (price <= 0) {
+      calcError.textContent = 'Enter a home price to see an estimated payment.';
+      calcError.classList.add('show');
+    } else if (down > price) {
+      calcError.textContent = 'The down payment is more than the home price, so the loan amount is $0.';
+      calcError.classList.add('show');
+    } else {
+      calcError.classList.remove('show');
+    }
+
+    setText('calc-total', money.format(total));
+    setText('calc-pi', moneyCents.format(pi));
+    setText('calc-tax-out', moneyCents.format(taxM));
+    setText('calc-ins-out', moneyCents.format(insM));
+    setText('calc-hoa-out', moneyCents.format(hoaM));
+    setText('calc-loan', money.format(loan));
+    setText('calc-interest', money.format(totalInterest));
+
+    var parts = [['bar-pi', pi], ['bar-tax', taxM], ['bar-ins', insM], ['bar-hoa', hoaM]];
+    for (var i = 0; i < parts.length; i++) {
+      document.getElementById(parts[i][0]).style.width = (total > 0) ? ((parts[i][1] / total * 100) + '%') : '0%';
+    }
+    return {price: price, down: down, rate: rate, term: term, loan: loan, pi: pi, total: total};
+  }
+
+  var calcInputs = [calcPrice, calcDown, calcRate, calcTax, calcInsurance, calcHoa];
+  for (var j = 0; j < calcInputs.length; j++) {
+    calcInputs[j].addEventListener('input', updateCalculator);
+  }
+  var termRadios = document.querySelectorAll('input[name="calc-term"]');
+  for (var k = 0; k < termRadios.length; k++) {
+    termRadios[k].addEventListener('change', updateCalculator);
+  }
+  document.getElementById('calc-use-average').addEventListener('click', function(){
+    calcRate.value = (calcTerm() === 15) ? '6.60' : '7.24';
+    updateCalculator();
+  });
+  document.getElementById('calc-discuss').addEventListener('click', function(){
+    var c = updateCalculator();
+    var typeSelect2 = document.getElementById('f-type');
+    typeSelect2.value = 'Residential';
+    document.getElementById('f-amount').value = money.format(c.loan);
+    document.getElementById('f-message').value =
+      'Mortgage calculator estimate: about ' + money.format(c.total) + ' per month ' +
+      '(principal & interest ' + moneyCents.format(c.pi) + ') for a ' + money.format(c.price) +
+      ' home with ' + money.format(c.down) + ' down, a ' + money.format(c.loan) +
+      ' loan at ' + c.rate.toFixed(2) + '% over ' + c.term + ' years. ' +
+      'Please check current rates and options for this scenario.';
+    document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+    setTimeout(function(){ document.getElementById('f-name').focus({preventScroll:true}); }, 450);
+  });
+  updateCalculator();
 })();
 </script>
 </body>
